@@ -1,0 +1,21 @@
+\documentclass[tightpage]{standalone}
+\usepackage{varwidth}
+\usepackage{feynmp-auto}
+\usepackage[pdftex]{graphicx}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{varwidth}{\linewidth}
+    \vspace*{0.5cm}
+    \begin{minipage}[t][2.6cm][t]{4.3cm}
+\begin{fmffile}{diagram}
+    \input{../diagram.tex}
+\end{fmffile}
+    \end{minipage}
+\end{varwidth}
+
+\end{document}
+
+

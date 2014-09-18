@@ -1,0 +1,39 @@
+\begin{fmfgraph*}(100,60)
+    \fmfleft{p1,p2}
+    \fmfright{t1,x1,x2,t2}
+    \fmflabel{$p$}{p1}
+    \fmflabel{$p$}{p2}
+    \fmflabel{$t$}{t1}
+    \fmflabel{$\bar{t}$}{t2}
+    \fmflabel{$\tilde{\chi}^0$}{x1}
+    \fmflabel{$\tilde{\chi}^0$}{x2}
+    \fmfv{decor.shape=circle,decor.filled=30,decor.size=.10w}{v1}
+
+    \fmf{plain}{p1,v1}
+    \fmf{plain}{p2,v1}
+
+    \fmf{plain}{v2,t1}
+    \fmf{plain}{t2,v3}
+    \fmf{plain,foreground=(0.95,,0.05,,0.05)}{v2,x1}
+    \fmf{boson,foreground=(0.95,,0.1,,0.1)}{v2,x1}
+    \fmf{plain,foreground=(0.95,,0.05,,0.05)}{v3,x2}
+    \fmf{boson,foreground=(0.95,,0.1,,0.1)}{v3,x2}
+
+    \fmf{dashes,foreground=(0.95,,0.1,,0.1),label=$\tilde{t}$,label.side=right}{v1,v2}
+    \fmf{dashes,foreground=(0.95,,0.1,,0.1),label=$\tilde{t}^*$,label.side=right}{v3,v1}
+
+    \fmffreeze
+    \fmfshift{5down}{p2}
+    \fmfshift{5up}{p1}
+    \fmfshift{20left}{v1}
+    \fmfshift{10left}{v2}
+    \fmfshift{10left}{v3}
+    \fmfshift{5down}{v2}
+    \fmfshift{5up}{v3}
+
+    \fmfi{plain}{vpath (__p1,__v1) shifted (thick*(1.2,0))}
+    \fmfi{plain}{vpath (__p1,__v1) shifted (thick*(-0.9,0.5))}
+    
+    \fmfi{plain}{vpath (__p2,__v1) shifted (thick*(1.2,0))}
+    \fmfi{plain}{vpath (__p2,__v1) shifted (thick*(-0.9,-0.5))}
+\end{fmfgraph*}
