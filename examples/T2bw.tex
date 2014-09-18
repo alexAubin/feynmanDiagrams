@@ -1,19 +1,33 @@
 \begin{fmfgraph*}(100,60)
+
+    % Initial and final particles
     \fmfleft{p1,p2}
     \fmfright{b1,W1,x1,x2,W2,b2}
+    
+    % Labels for initial and final particles
     \fmflabel{$p$}{p1}
     \fmflabel{$p$}{p2}
     \fmflabel{$b$}{b1}
     \fmflabel{$\bar{b}$}{b2}
-    \fmflabel{$W^{-}$}{W1}
-    \fmflabel{$W^{+}$}{W2}
+    \fmflabel{$W^{+}$}{W1}
+    \fmflabel{$W^{-}$}{W2}
     \fmflabel{$\tilde{\chi}^0$}{x1}
     \fmflabel{$\tilde{\chi}^0$}{x2}
-    \fmfv{decor.shape=circle,decor.filled=30,decor.size=.10w}{v1}
 
     % Protons
     \fmf{plain}{p1,v1}
     \fmf{plain}{p2,v1}
+    \fmfv{decor.shape=circle,decor.filled=30,decor.size=.10w}{v1}
+
+    % Stops
+    \fmf{dashes,foreground=(0.95,,0.1,,0.1),label=$\tilde{t}$,label.side=right}{v1,v2}
+    \fmf{dashes,foreground=(0.95,,0.1,,0.1),label=$\tilde{t}^*$,label.side=right}{v3,v1}
+
+    % Charginos
+    \fmf{plain,foreground=(0.95,,0.05,,0.05),label=$\tilde{\chi}^-$,label.side=right,label.dist=2}{v3,v5}
+    \fmf{boson,foreground=(0.95,,0.05,,0.05)}{v3,v5}
+    \fmf{plain,foreground=(0.95,,0.05,,0.05),label=$\tilde{\chi}^+$,label.side=left,label.dist=2}{v2,v4}
+    \fmf{boson,foreground=(0.95,,0.05,,0.05)}{v2,v4}
 
     % b's
     \fmf{plain}{v2,b1}
@@ -23,23 +37,16 @@
     \fmf{boson}{v4,W1}
     \fmf{boson}{W2,v5}
 
-    % Charginos
-    \fmf{plain,foreground=(0.95,,0.05,,0.05),label=$\tilde{\chi}^\pm$,label.side=right,label.dist=2}{v3,v5}
-    \fmf{boson,foreground=(0.95,,0.05,,0.05)}{v3,v5}
-    \fmf{plain,foreground=(0.95,,0.05,,0.05),label=$\tilde{\chi}^\mp$,label.side=left,label.dist=2}{v2,v4}
-    \fmf{boson,foreground=(0.95,,0.05,,0.05)}{v2,v4}
-
     % Neutralinos
     \fmf{plain,foreground=(0.95,,0.05,,0.05)}{v4,x1}
     \fmf{boson,foreground=(0.95,,0.05,,0.05)}{v4,x1}
     \fmf{plain,foreground=(0.95,,0.05,,0.05)}{v5,x2}
     \fmf{boson,foreground=(0.95,,0.05,,0.05)}{v5,x2}
 
-    % Stops
-    \fmf{dashes,foreground=(0.95,,0.1,,0.1),label=$\tilde{t}$,label.side=right}{v1,v2}
-    \fmf{dashes,foreground=(0.95,,0.1,,0.1),label=$\tilde{t}^*$,label.side=right}{v3,v1}
-
+    % Free position of stuff
     \fmffreeze
+
+    % Shift vertices
     \fmfshift{5down}{p2}
     \fmfshift{5up}{p1}
     \fmfshift{20left}{v1}
@@ -47,6 +54,10 @@
     \fmfshift{20left}{v3}
     \fmfshift{5down}{v2}
     \fmfshift{5up}{v3}
+    \fmfshift{10left}{v4}
+    \fmfshift{10left}{v5}
+
+    % Additional lines for protons
     \fmfi{plain}{vpath (__p1,__v1) shifted (thick*(1.2,0))}
     \fmfi{plain}{vpath (__p1,__v1) shifted (thick*(-0.9,0.5))}
     
