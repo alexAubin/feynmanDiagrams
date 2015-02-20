@@ -13,6 +13,23 @@ Dependencies
 Usage
 -----
 
-- Edit `diagram.tex` ;
-- Type `make` ;
-- Copy `diagram.pdf` to where you need it.
+First, get familiar with the [feynmf syntax](http://distrib-coffee.ipsl.jussieu.fr/pub/mirrors/ctan/macros/latex/contrib/feynmf/fmfman.pdf).
+
+Then, create and edit your diagram.
+
+```
+    cp src/example.tex src/myDiagram.tex
+    vim src/myDiagram.tex
+```
+
+Compile your diagram
+
+```
+    make myDiagram
+```
+
+Check the output
+
+```
+    evince output/myDiagram.pdf
+```
